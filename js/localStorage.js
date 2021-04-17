@@ -30,19 +30,19 @@ var removeFood = function() {
     location.reload();
   }
 
-  var temp = [];
+  /*var temp = [];
   const list = $( '.listItem' ).find( ".listContentText" ).get();
   $(".listItem").each(function(){
     var txt = $(this).find(".listContentText").text();
     temp.push(txt);
-  });
+  });*/
 
   //declare an array
-  var unDone = new Array();
+  var food = new Array();
   //get all instances of the element and iterate through each one
-  $('.listItem .listContentText').each(function(){
-      unDone.push($(this).text()); // Update the cart
-      localStorage.setItem("myFavoriteFoods", JSON.stringify(unDone)); // store cart
+  $('.listItem .listContentText').each(function() {
+      food.push($(this).text()); // Update the cart
+      localStorage.setItem("myFavoriteFoods", JSON.stringify(food)); // store cart
       //console.log(localStorage.getItem("items"))
   });
 };
